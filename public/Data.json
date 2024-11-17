@@ -1,0 +1,249 @@
+[
+    {
+      "_id": "1",
+      "brand_name": "Bata",
+      "rating": 4.7,
+      "description": "A global footwear brand known for stylish, durable, and affordable shoes.",
+      "brand_logo": "https://i.ibb.co.com/C9hQgqR/bata.jpg",
+      "coupons": [
+        {
+          "coupon_code": "BATA10",
+          "description": "10% off on selected footwear.",
+          "expiry_date": "2024-12-31",
+          "condition": "Minimum purchase of $30.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "BATASHIP",
+          "description": "Free delivery on orders above $50.",
+          "expiry_date": "2024-11-30",
+          "condition": "Standard delivery only.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.bata.com.bd",
+      "category": "Footwear",
+      "isSaleOn": true
+    },
+    {
+      "_id": "2",
+      "brand_name": "Arong",
+      "rating": 4.8,
+      "description": "A social enterprise renowned for promoting Bangladeshi culture and handmade products.",
+      "brand_logo": "https://i.ibb.co.com/9hr8FM7/download-5.png",
+      "coupons": [
+        {
+          "coupon_code": "ARONG20",
+          "description": "20% off on all handmade items.",
+          "expiry_date": "2025-01-01",
+          "condition": "Applies to in-store and online purchases.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FREESHIPARONG",
+          "description": "Free delivery on orders over $50.",
+          "expiry_date": "2025-01-31",
+          "condition": "Standard delivery only.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.arong.com",
+      "category": "Handmade and Lifestyle",
+      "isSaleOn": true
+    },
+    {
+      "_id": "3",
+      "brand_name": "Adidas",
+      "rating": 4.7,
+      "description": "Global leader in sportswear and activewear.",
+      "brand_logo": "https://i.ibb.co.com/G5P5kjG/download-4.png",
+      "coupons": [
+        {
+          "coupon_code": "ADIDAS15",
+          "description": "15% off on new arrivals.",
+          "expiry_date": "2025-01-15",
+          "condition": "Excludes sale items.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FITFREE",
+          "description": "Free shipping on sportswear.",
+          "expiry_date": "2025-01-31",
+          "condition": "Minimum purchase $40.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.adidas.com",
+      "category": "Sportswear",
+      "isSaleOn": true
+    },
+    {
+      "_id": "4",
+      "brand_name": "Puma",
+      "rating": 4.6,
+      "description": "Innovative and stylish sports apparel and footwear.",
+      "brand_logo": "https://i.ibb.co.com/92DBCJf/download-1.png",
+      "coupons": [
+        {
+          "coupon_code": "PUMA30",
+          "description": "Flat 30% off on running shoes.",
+          "expiry_date": "2025-03-01",
+          "condition": "Limited to online orders.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "SPORTY20",
+          "description": "20% off on all activewear.",
+          "expiry_date": "2024-12-31",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.puma.com",
+      "category": "Sportswear",
+      "isSaleOn": true
+    },
+    {
+      "_id": "5",
+      "brand_name": "Hugo Boss",
+      "rating": 4.8,
+      "description": "Luxury fashion brand known for elegant clothing and accessories.",
+      "brand_logo": "https://i.ibb.co.com/cCxTYzZ/download-3.png",
+      "coupons": [
+        {
+          "coupon_code": "BOSS10",
+          "description": "10% off on suits and formalwear.",
+          "expiry_date": "2025-02-28",
+          "condition": "Applies to select categories.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "LUXFREE",
+          "description": "Free delivery on luxury items.",
+          "expiry_date": "2025-01-31",
+          "condition": "Orders above $100 only.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.hugoboss.com",
+      "category": "Luxury Fashion",
+      "isSaleOn": false
+    },
+    {
+      "_id": "6",
+      "brand_name": "Nike",
+      "rating": 4.9,
+      "description": "Iconic brand for athletic footwear, apparel, and accessories.",
+      "brand_logo": "https://i.ibb.co.com/LhV52xK/download-2.png",
+      "coupons": [
+        {
+          "coupon_code": "NIKE50",
+          "description": "50% off on select items.",
+          "expiry_date": "2025-01-01",
+          "condition": "Maximum discount $30.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "RUNFREE",
+          "description": "Free shipping for runners.",
+          "expiry_date": "2025-02-15",
+          "condition": "Minimum purchase $75.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.nike.com",
+      "category": "Sportswear",
+      "isSaleOn": true
+    },
+    {
+      "_id": "7",
+      "brand_name": "Apex",
+      "rating": 4.5,
+      "description": "Premium footwear brand offering stylish and durable shoes.",
+      "brand_logo": "https://i.ibb.co.com/YD6tNqv/download.png",
+      "coupons": [
+        {
+          "coupon_code": "SHOES20",
+          "description": "20% off on all footwear.",
+          "expiry_date": "2024-12-31",
+          "condition": "Valid for online purchases only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "APEXDEL",
+          "description": "Free delivery on orders above $50.",
+          "expiry_date": "2024-11-30",
+          "condition": "Applies to standard shipping.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.apex4u.com",
+      "category": "Footwear",
+      "isSaleOn": true
+    },
+    {
+        "_id": "8",
+        "brand_name": "Rokomari",
+        "rating": 4.7,
+        "description": "A leading online bookstore in Bangladesh.",
+        "brand_logo": "https://i.ibb.co.com/XbpKqjf/download-7.png",
+        "coupons": [
+          {
+            "coupon_code": "BOOKLOVER",
+            "description": "15% off on all books.",
+            "expiry_date": "2024-12-25",
+            "condition": "Applies to orders above $20.",
+            "coupon_type": "Discount"
+          }
+        ],
+        "shop_link": "https://www.rokomari.com",
+        "category": "Books",
+        "isSaleOn": false
+      },
+      {
+        "_id": "9",
+        "brand_name": "Foodpanda",
+        "rating": 4.6,
+        "description": "Order food from your favorite restaurants and enjoy deals.",
+        "brand_logo": "https://i.ibb.co.com/27Bfv0y/download-8.png",
+        "coupons": [
+          {
+            "coupon_code": "PANDA50",
+            "description": "Flat $5 off on orders above $15.",
+            "expiry_date": "2025-01-15",
+            "condition": "First order only.",
+            "coupon_type": "Discount"
+          },
+          {
+            "coupon_code": "SNACKDEAL",
+            "description": "20% off on snacks.",
+            "expiry_date": "2025-02-10",
+            "condition": "Minimum purchase of $10.",
+            "coupon_type": "Discount"
+          }
+        ],
+        "shop_link": "https://www.foodpanda.com.bd",
+        "category": "Food Delivery",
+        "isSaleOn": true
+      },
+      {
+        "_id": "10",
+        "brand_name": "Pickaboo",
+        "rating": 4.5,
+        "description": "Shop electronics and gadgets with exclusive discounts.",
+        "brand_logo": "https://i.ibb.co.com/4ffxcpN/download-6.png",
+        "coupons": [
+          {
+            "coupon_code": "PICK20",
+            "description": "20% off on selected gadgets.",
+            "expiry_date": "2025-03-01",
+            "condition": "Limited to one use per user.",
+            "coupon_type": "Discount"
+          }
+        ],
+        "shop_link": "https://www.pickaboo.com",
+        "category": "Electronics",
+        "isSaleOn": true
+      }
+  ]
+  
