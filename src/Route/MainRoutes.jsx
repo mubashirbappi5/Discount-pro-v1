@@ -10,7 +10,8 @@ const MainRoutes = createBrowserRouter([{
     element: <Root/>,
     children:[{
         path:'/',
-        element:<Home/>
+        element:<Home/>,
+        loader:()=>fetch('/public/Data.json')
     },
     {
         path:"/brands",
