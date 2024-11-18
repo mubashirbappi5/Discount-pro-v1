@@ -6,13 +6,7 @@
       "description": "A global footwear brand known for stylish, durable, and affordable shoes.",
       "brand_logo": "https://i.ibb.co.com/C9hQgqR/bata.jpg",
       "coupons": [
-        {
-          "coupon_code": "BATA10",
-          "description": "10% off on selected footwear.",
-          "expiry_date": "2024-12-31",
-          "condition": "Minimum purchase of $30.",
-          "coupon_type": "Discount"
-        },
+        
         {
           "coupon_code": "BATASHIP",
           "description": "Free delivery on orders above $50.",
@@ -48,7 +42,7 @@
         }
       ],
       "shop_link": "https://www.arong.com",
-      "category": "Handmade and Lifestyle",
+      "category": " Lifestyle",
       "isSaleOn": true
     },
     {
