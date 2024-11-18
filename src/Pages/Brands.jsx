@@ -2,9 +2,18 @@ import React from 'react';
 
 const Brands = () => {
     return (
-        <div>
-            <h1>brand section</h1>
+        <div className='w-11/12 mx-auto'>
+            <section>
+           <div className=' flex flex-col gap-2 items-center'>
+           <h1 className='text-3xl font-bold'>All Brands</h1>
+           <h4 className='text-lg font-semibold'>Unbeatable Deals from Your Favorite Brands</h4>
+           <label className="input input-bordered w-[600px] flex items-center pr-0 ">
+  <input type="text" className="grow" placeholder="Start typing to find your discount" />
+  <button className='btn bg-green-400 font-semibold'> search</button>
+</label>
+           </div>
             
+            </section>
         </div>
     );
 };

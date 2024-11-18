@@ -18,7 +18,7 @@ const Home = () => {
            <h1 className="text-4xl font-bold text-center"> Top Brands </h1>
            <Marquee pauseOnHover={true}>
        
-           {
+           {Array.isArray(data) &&
             data.filter(  data => data.rating >4.6).map(data=>  <TopBrands key={data.id} data={data}/>)
            }
         
@@ -29,7 +29,7 @@ const Home = () => {
                 <h1 className='text-3xl font-bold text-center'>Brands on Sale</h1>
 
              <div className='grid grid-cols-4 gap-4 my-10'>
-             {
+             {Array.isArray(data) &&
                  data.filter(data=>data.isSaleOn===true).map(data=><BrandsonSale key={data.id} data={data}/>)  
               }
              </div>
