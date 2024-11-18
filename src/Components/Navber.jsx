@@ -10,7 +10,7 @@ const Navber = () => {
     
     </>
     return (
-        <div>
+        <div className="p-5">
             <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -37,14 +37,17 @@ const Navber = () => {
     </div>
     <a className="btn btn-ghost text-xl">Discount PRO</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar-center hidden lg:flex gap-20">
+    <div>
+      <h1>welcome massage</h1>
+    </div>
     <ul className="menu menu-horizontal px-1">
       {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Login</a>
-    <a className="btn">Register</a>
+  <div className="navbar-end  gap-4">
+    <a className="btn btn-outline">Login</a>
+    <a className="btn btn-outline">Register</a>
   </div>
 </div>
             
