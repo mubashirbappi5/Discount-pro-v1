@@ -15,7 +15,8 @@ const MainRoutes = createBrowserRouter([{
     },
     {
         path:"/brands",
-        element:<Brands/>
+        element:<Brands/>,
+        loader:()=>fetch('/public/Data.json')
     },
     {
         path:"/about",

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import BrandCards from '../Components/BrandCards';
 
 const Brands = () => {
+    const data = useLoaderData()
     return (
         <div className='w-11/12 mx-auto'>
             <section>
@@ -12,6 +15,10 @@ const Brands = () => {
   <button className='btn bg-green-400 font-semibold'> search</button>
 </label>
            </div>
+           {
+            data.map(data=> <BrandCards key={data.id} data={data}/>)
+           }
+
             
             </section>
         </div>

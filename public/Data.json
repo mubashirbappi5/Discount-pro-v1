@@ -3,7 +3,7 @@
       "_id": "1",
       "brand_name": "Bata",
       "rating": 4.7,
-      "description": "A global footwear brand known for stylish, durable, and affordable shoes.",
+      "description": "Known for its wide range of durable and affordable shoes for all ages, Bata offers frequent promotions on its footwear collection. Perfect for those seeking practical, everyday shoes at a great value.",
       "brand_logo": "https://i.ibb.co.com/C9hQgqR/bata.jpg",
       "coupons": [
         
@@ -23,7 +23,7 @@
       "_id": "2",
       "brand_name": "Arong",
       "rating": 4.8,
-      "description": "A social enterprise renowned for promoting Bangladeshi culture and handmade products.",
+      "description": "Arong is a popular lifestyle and home goods store offering a wide range of handmade and traditional products. Shoppers can enjoy discounts on unique home decor, fashion, and lifestyle items, making it a perfect destination for artisan-crafted goods.",
       "brand_logo": "https://i.ibb.co.com/9hr8FM7/download-5.png",
       "coupons": [
         {
@@ -49,7 +49,7 @@
       "_id": "3",
       "brand_name": "Adidas",
       "rating": 4.7,
-      "description": "Global leader in sportswear and activewear.",
+      "description": "Famous for its footwear, apparel, and accessories, Adidas runs seasonal sales and special promotions on shoes and sportswear. Great for those who want to combine style with activewear at a reduced price.",
       "brand_logo": "https://i.ibb.co.com/G5P5kjG/download-4.png",
       "coupons": [
         {
@@ -75,7 +75,7 @@
       "_id": "4",
       "brand_name": "Puma",
       "rating": 4.6,
-      "description": "Innovative and stylish sports apparel and footwear.",
+      "description": "Known for its sportswear and stylish casual wear, Puma offers frequent discounts on various products like running shoes, gym wear, and sports equipment. Ideal for athletes and fashion enthusiasts looking to save on quality gear.",
       "brand_logo": "https://i.ibb.co.com/92DBCJf/download-1.png",
       "coupons": [
         {
@@ -101,7 +101,7 @@
       "_id": "5",
       "brand_name": "Hugo Boss",
       "rating": 4.8,
-      "description": "Luxury fashion brand known for elegant clothing and accessories.",
+      "description": "Renowned for luxury men's and women's clothing, Hugo Boss frequently offers promotions on its high-end suits, casual wear, and accessories. It’s a great option for those seeking classic, sophisticated fashion at a better price.",
       "brand_logo": "https://i.ibb.co.com/cCxTYzZ/download-3.png",
       "coupons": [
         {
@@ -127,7 +127,7 @@
       "_id": "6",
       "brand_name": "Nike",
       "rating": 4.9,
-      "description": "Iconic brand for athletic footwear, apparel, and accessories.",
+      "description": "As a leading brand in sportswear, Nike frequently offers sales on athletic shoes, apparel, and workout gear. Shoppers can find discounts on the latest athletic shoes and activewear, perfect for those leading an active lifestyle.",
       "brand_logo": "https://i.ibb.co.com/LhV52xK/download-2.png",
       "coupons": [
         {
@@ -153,7 +153,7 @@
       "_id": "7",
       "brand_name": "Apex",
       "rating": 4.5,
-      "description": "Premium footwear brand offering stylish and durable shoes.",
+      "description": "Apex offers stylish footwear at affordable prices, with regular discounts on shoes and accessories. It’s a great choice for those looking for comfortable, durable, and trendy shoes without breaking the bank.",
       "brand_logo": "https://i.ibb.co.com/YD6tNqv/download.png",
       "coupons": [
         {
@@ -179,7 +179,7 @@
         "_id": "8",
         "brand_name": "Rokomari",
         "rating": 4.7,
-        "description": "A leading online bookstore in Bangladesh.",
+        "description": "A leading online bookstore in Bangladesh, Rokomari offers a wide selection of books, ranging from academic to fiction, at discounted prices during various sales events. It’s a go-to platform for book lovers and students alike.",
         "brand_logo": "https://i.ibb.co.com/XbpKqjf/download-7.png",
         "coupons": [
           {
@@ -198,7 +198,7 @@
         "_id": "9",
         "brand_name": "Foodpanda",
         "rating": 4.6,
-        "description": "Order food from your favorite restaurants and enjoy deals.",
+        "description": "A popular food delivery service, Foodpanda brings your favorite meals from local restaurants to your door. Enjoy a variety of discounts on food orders through their regular promotions and special deals, making it easier to eat your favorite dishes for less.",
         "brand_logo": "https://i.ibb.co.com/27Bfv0y/download-8.png",
         "coupons": [
           {
@@ -224,7 +224,7 @@
         "_id": "10",
         "brand_name": "Pickaboo",
         "rating": 4.5,
-        "description": "Shop electronics and gadgets with exclusive discounts.",
+        "description": "Specializing in electronics and gadgets, Pickaboo offers exclusive discounts on products like smartphones, laptops, and accessories. Regular sales help shoppers get the latest tech at affordable prices, perfect for gadget enthusiasts.",
         "brand_logo": "https://i.ibb.co.com/4ffxcpN/download-6.png",
         "coupons": [
           {
