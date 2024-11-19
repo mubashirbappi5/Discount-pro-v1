@@ -46,8 +46,8 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end  gap-4">
-    <a className="btn btn-outline">Login</a>
-    <a className="btn btn-outline">Register</a>
+    <NavLink to={'/login'} className="btn btn-outline">Login</NavLink>
+    <NavLink to={'register'} className="btn btn-outline">Register</NavLink>
   </div>
 </div>
             

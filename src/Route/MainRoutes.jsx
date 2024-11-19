@@ -3,6 +3,8 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home";
 import Brands from "../Pages/Brands";
 import AboutDev from "../Pages/AboutDev";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 
 const MainRoutes = createBrowserRouter([{
@@ -21,6 +23,14 @@ const MainRoutes = createBrowserRouter([{
     {
         path:"/about",
         element:<AboutDev/>
+    },
+    {
+        path:"/login",
+        element:<Login/>
+    },
+    {
+        path:"/register",
+        element:<Register/>
     }
 ]
   },])
