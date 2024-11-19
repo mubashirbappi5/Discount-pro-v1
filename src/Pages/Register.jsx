@@ -1,20 +1,61 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import SocialBtn from "../Components/SocialBtn";
+import { AuthnContext } from "../Provider/AuthContext";
 
 const Register = () => {
+  const {registerUser,updateuser,messageErorr,setmessageErorr}=useContext(AuthnContext)
+
+    const HandleRegister = (e)=>{
+        e.preventDefault()
+        const form = e.target
+        const name = form.name.value
+        const url = form.url.value
+        const email = form.email.value
+        const password = form.password.value
+        console.log(name,url,email,password)
+
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+          if(!passwordRegex.test(password)) {
+           
+            setmessageErorr("invalid password")
+            return
+          }
+        
+        registerUser(email,password)
+        .then((res)=>{
+          console.log(res.user)
+          const profile ={
+            displayName:name,
+            photoURL:url
+          }
+          updateuser(profile)
+          .then(()=>{
+            console.log('profile update')
+
+          })
+          .catch((error)=>{
+            console.log(error.message)
+          })
+        })
+        .catch((error)=>{
+          alert(error.message)
+        })
+
+    }
   return (
     <div>
       <div>
         <h1 className="text-center font-bold text-3xl my-7">Registration </h1>
         <div className="card bg-base-100 w-full max-w-sm shrink-0  mx-auto border pb-5">
-          <form className="card-body">
+          <form onSubmit={HandleRegister} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
               <input
-                type="email"
+                type="text"
+                name="name"
                 placeholder="Your Name"
                 className="input input-bordered"
                 required
@@ -25,7 +66,8 @@ const Register = () => {
                 <span className="label-text">Photo-URL</span>
               </label>
               <input
-                type="email"
+                type="text"
+                name="url"
                 placeholder="Your Photo Url"
                 className="input input-bordered"
                 required
@@ -38,6 +80,7 @@ const Register = () => {
               <input
                 type="email"
                 placeholder="email"
+                name="email"
                 className="input input-bordered"
                 required
               />
@@ -48,10 +91,14 @@ const Register = () => {
               </label>
               <input
                 type="password"
+                name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
+              {
+                messageErorr && <p>{messageErorr}</p>
+              }
             </div>
             <div className="form-control mt-6">
               <button className="btn bg-green-500 text-white font-semibold">
