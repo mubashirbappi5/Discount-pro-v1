@@ -5,11 +5,13 @@ import Brands from "../Pages/Brands";
 import AboutDev from "../Pages/AboutDev";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 const MainRoutes = createBrowserRouter([{
     path: "/",
     element: <Root/>,
+    errorElement:<ErrorPage/>,
     children:[{
         path:'/',
         element:<Home/>,
