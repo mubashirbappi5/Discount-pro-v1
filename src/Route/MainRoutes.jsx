@@ -8,6 +8,7 @@ import Register from "../Pages/Register";
 import ErrorPage from "../Pages/ErrorPage";
 import Couponpage from "../Pages/Couponpage";
 import PrivateRoute from "./PrivateRoute";
+import MyProfile from "../Pages/MyProfile";
 
 
 const MainRoutes = createBrowserRouter([{
@@ -40,7 +41,12 @@ const MainRoutes = createBrowserRouter([{
         path:'/brands/:id',
         loader:()=> fetch('/public/Data.json'),
         element:<PrivateRoute><Couponpage/></PrivateRoute>
+    },
+    {
+        path:'/my-profile',
+        element:<PrivateRoute><MyProfile/></PrivateRoute>
     }
+
 ]
   },])
 
