@@ -63,10 +63,10 @@ const Navber = () => {
         </div>
         <div className="navbar-end  gap-4">
           {user ? (
-           <div className="flex ">
-             <img className="w-32" src={photoURL} alt="ss" />
+           <div className="flex gap-2 ">
+             <img className="w-20 rounded-full" src={photoURL} alt="ss" />
             <div className="flex flex-col gap-2">
-            <h5 className="font-bold">{email}</h5>
+            <h5 className="font-bold text-xs">{email}</h5>
             <div>
             <button onClick={ handlelogoutbtn} className="btn btn-xs btn-outline">Log Out</button>
             </div>

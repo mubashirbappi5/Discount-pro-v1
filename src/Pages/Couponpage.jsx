@@ -8,7 +8,7 @@ const Couponpage = () => {
     console.log(id)
     const brand = data.find(item => item._id === id)
      console.log(brand)
-     const {brand_name,brand_logo,rating,coupons} = brand
+     const {brand_name,brand_logo,rating,coupons,shop_link} = brand
     
     return (
         <div className='w-11/12 mx-auto '>
@@ -24,7 +24,7 @@ const Couponpage = () => {
            </section>
            <section className='flex justify-evenly items-center'>
             {
-                coupons.map((coupon,idx) => <CouponCard key={idx} coupon={coupon}/>)
+                coupons.map((coupon,idx) => <CouponCard key={idx} coupon={coupon} shop_link={shop_link}/>)
             }
            </section>
             
