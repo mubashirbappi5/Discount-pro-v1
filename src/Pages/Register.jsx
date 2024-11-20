@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialBtn from "../Components/SocialBtn";
 import { AuthnContext } from "../Provider/AuthContext";
 
 const Register = () => {
   const {registerUser,updateuser,messageErorr,setmessageErorr}=useContext(AuthnContext)
-
+   const navigate = useNavigate()
     const HandleRegister = (e)=>{
         e.preventDefault()
         const form = e.target
@@ -37,6 +37,7 @@ const Register = () => {
           .catch((error)=>{
             console.log(error.message)
           })
+          navigate('/')
         })
         .catch((error)=>{
           alert(error.message)

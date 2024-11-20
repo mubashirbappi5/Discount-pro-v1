@@ -16,7 +16,7 @@ const Brands = () => {
 </label>
            </div>
            {
-            data.map(data=> <BrandCards key={data.id} data={data}/>)
+            data.map(data=> <BrandCards key={data._id} data={data}/>)
            }
 
             

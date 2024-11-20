@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const BrandCards = ({data}) => {
-    const {brand_name,brand_logo,description,rating,isSaleOn} = data
+    const {brand_name,brand_logo,description,rating,isSaleOn,_id} = data
+    const navigate = useNavigate()
+    const handleviewcoupon = ()=>{
+      navigate(`/brands/${_id}`)
+
+    }
     return (
         <div>
            <div className="card bg-base-100 w-10/12 mx-auto border">
@@ -22,7 +28,7 @@ const BrandCards = ({data}) => {
     }
     </div>
     <div className="card-actions flex justify-center">
-      <button className="btn btn-primary">View Coupons</button>
+      <button onClick={handleviewcoupon} className="btn btn-primary">View Coupons</button>
     </div>
   </div>
 </div>
