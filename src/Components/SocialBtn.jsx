@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthnContext } from '../Provider/AuthContext';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { FaGoogle } from 'react-icons/fa';
 
 const SocialBtn = () => {
     const {googlesigninUser} = useContext(AuthnContext)
@@ -18,7 +19,7 @@ const SocialBtn = () => {
     }
     return (
         <div>
-            <button onClick={handlegooglebtn} className='btn rounded-lg'>Continue with Google</button>
+            <button onClick={handlegooglebtn} className='btn rounded-lg'> <FaGoogle />Continue with Google</button>
             
         </div>
     );
