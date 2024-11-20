@@ -4,7 +4,7 @@ import { AuthnContext } from "./../Provider/AuthContext";
 import "animate.css";
 
 const Navber = () => {
-  const { name, user, signoutUser } = useContext(AuthnContext);
+  const {  user, signoutUser } = useContext(AuthnContext);
   const {displayName, photoURL, email } = user || {}
   const  handlelogoutbtn = ()=>{
     signoutUser()
@@ -18,9 +18,11 @@ const Navber = () => {
       <li>
         <NavLink to={"/brands"}>Brands</NavLink>
       </li>
-      <li>
+      {
+        user?<li>
         <NavLink to={"/my-profile"}>my-profile</NavLink>
-      </li>
+      </li>:''
+      }
       <li>
         <NavLink to={"/about"}>About Dev</NavLink>
       </li>
@@ -30,7 +32,7 @@ const Navber = () => {
     <div className="p-5">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown z-50">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,18 +56,20 @@ const Navber = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Discount PRO </a>
+          <a className="btn btn-ghost lg:text-xl text-sm ">Discount PRO </a>
         </div>
         <div className="navbar-center hidden lg:flex gap-20">
           <div>
-            <h1 className="animate__animated animate__fadeInDown animate__delay-2s">welcome  {displayName}! </h1>
+           {
+            user? <h1 className="animate__animated animate__fadeInDown animate__delay-2s">welcome  {displayName}! </h1>:''
+           }
           </div>
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end  gap-4">
           {user ? (
            <div className="flex gap-2 ">
-             <img className="w-20 rounded-full" src={photoURL} alt="ss" />
+             <img className=" w-10 md:w-20 rounded-full" src={photoURL} alt="ss" />
             <div className="flex flex-col gap-2">
             <h5 className="font-bold text-xs">{email}</h5>
             <div>

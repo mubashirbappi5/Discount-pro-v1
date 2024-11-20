@@ -33,7 +33,7 @@ const Home = () => {
            <section className='w-11/12 mx-auto'>
                 <h1 className='text-3xl font-bold text-center'>Brands on Sale</h1>
 
-             <div className='grid grid-cols-4 gap-4 my-10'>
+             <div className='grid  grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-4 my-10 '>
              {Array.isArray(data) &&
                  data.filter(data=>data.isSaleOn===true).map(data=><BrandsonSale key={data.id} data={data}/>)  
               }

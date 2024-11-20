@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 const Banner = () => {
+  const [loading,setloading] = useState(true)
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setloading(false); 
+    }, 1000); 
+
+    return () => clearTimeout(timeout);
+  }, []);
     return (
         <div className='px-10'>
-            <Swiper
+
+           {
+            loading? <div>
+              <div className="flex w-full flex-col gap-4">
+  <div className="skeleton h-32 w-full"></div>
+  <div className="skeleton h-4 w-28"></div>
+  <div className="skeleton h-4 w-full"></div>
+  <div className="skeleton h-4 w-full"></div>
+</div>
+
+            </div>: <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -30,6 +48,7 @@ const Banner = () => {
         </SwiperSlide>
         
       </Swiper>
+           }
         </div>
     );
 };

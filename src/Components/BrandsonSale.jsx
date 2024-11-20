@@ -12,7 +12,7 @@ const BrandsonSale = ({data}) => {
         <div  data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000">
-            <div className="card bg-base-100 w-72 h-80 border-2">
+            <div className="card bg-base-100 w-10/12 mx-auto md:w-72 h-80 border-2">
   <figure className="px-10 pt-10">
     <span className='bg-red-500 p-2 text-white absolute top-0 left-14 rounded-b-md'>SALE</span>
     <img
