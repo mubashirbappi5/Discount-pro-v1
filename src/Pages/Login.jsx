@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import SocialBtn from '../Components/SocialBtn';
 import { AuthnContext } from '../Provider/AuthContext';
 
 const Login = () => {
   const {signinUser} = useContext(AuthnContext)
+  const location = useLocation()
+  const navigate = useNavigate()
     const LoginHandle = (e)=>{
         e.preventDefault()
         const form = e.target
@@ -17,6 +19,8 @@ const Login = () => {
         signinUser(email,password)
         .then((res)=>{
           console.log(res.user)
+          navigate(location?.state?location.state:'/')
+
         })
         .catch(error=>alert(error.message))
 

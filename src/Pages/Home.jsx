@@ -5,17 +5,22 @@ import { useLoaderData } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import BrandsonSale from '../Components/BrandsonSale';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+
 const Home = () => {
     const data = useLoaderData()
     console.log(data)
     
     return (
-        <div>
+        <div >
+        
            <section>
             <Banner/>
            </section>
            <section className='my-10 w-11/12 mx-auto'>
-           <h1 className="text-4xl font-bold text-center"> Top Brands </h1>
+           <h1 data-aos="fade-up" className="text-4xl font-bold text-center"> Top Brands </h1>
            <Marquee pauseOnHover={true}>
        
            {Array.isArray(data) &&

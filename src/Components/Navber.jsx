@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthnContext } from "./../Provider/AuthContext";
+import "animate.css";
 
 const Navber = () => {
   const { name, user, signoutUser } = useContext(AuthnContext);
@@ -57,7 +58,7 @@ const Navber = () => {
         </div>
         <div className="navbar-center hidden lg:flex gap-20">
           <div>
-            <h1>welcome massage {displayName} </h1>
+            <h1 className="animate__animated animate__fadeInDown animate__delay-2s">welcome  {displayName}! </h1>
           </div>
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>

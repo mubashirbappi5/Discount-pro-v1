@@ -6,7 +6,7 @@ const Brands = () => {
     const data = useLoaderData()
     return (
         <div className='w-11/12 mx-auto'>
-            <section>
+            <section className='space-y-10'>
            <div className=' flex flex-col gap-2 items-center'>
            <h1 className='text-3xl font-bold'>All Brands</h1>
            <h4 className='text-lg font-semibold'>Unbeatable Deals from Your Favorite Brands</h4>
@@ -15,9 +15,11 @@ const Brands = () => {
   <button className='btn bg-green-400 font-semibold'> search</button>
 </label>
            </div>
-           {
+          <div className='space-y-4'> 
+          {
             data.map(data=> <BrandCards key={data._id} data={data}/>)
            }
+          </div>
 
             
             </section>

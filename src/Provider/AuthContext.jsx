@@ -6,17 +6,21 @@ export const AuthnContext = createContext()
 const AuthContext = ({children}) => {
     const [messageErorr,setmessageErorr] = useState('')
     const [user , setuser] = useState(null)
+    const [loading,setloading] = useState(true)
     const provider = new GoogleAuthProvider()
      
      const registerUser = (email,password)=>{
+        setloading(true)
         return createUserWithEmailAndPassword(auth,email,password)
      }
      const updateuser = (profie) =>{
+        setloading(true)
        return updateProfile(auth.currentUser,profie)
 
      }
 
      const signinUser = (email,password) => {
+        setloading(true)
         return signInWithEmailAndPassword(auth,email,password)
      }
 
@@ -24,6 +28,7 @@ const AuthContext = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth,currentUser=>{
             console.log(currentUser)
             setuser(currentUser)
+            setloading(false)
         })
         return ()=>{
             unsubscribe()
@@ -31,10 +36,12 @@ const AuthContext = ({children}) => {
 
     },[])
     const googlesigninUser = ()=>{
+        setloading(true)
       return  signInWithPopup(auth,provider)
     }
 
     const signoutUser = ()=>{
+        setloading(true)
         signOut(auth)
         .then(()=>{
             console.log("log out done")
@@ -52,6 +59,8 @@ const AuthContext = ({children}) => {
         user,
         signoutUser,
         googlesigninUser,
+        loading,
+        setloading,
 
     }
    
