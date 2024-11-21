@@ -16,7 +16,7 @@ const AuthContext = ({children}) => {
         return createUserWithEmailAndPassword(auth,email,password)
      }
      const updateuser = (profie) =>{
-        setloading(true)
+        setloading(false)
        return updateProfile(auth.currentUser,profie)
 
      }

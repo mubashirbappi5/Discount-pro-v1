@@ -1,4 +1,8 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+
 
 const Reviewsection = () => {
     const reviews = [
@@ -35,7 +39,7 @@ const Reviewsection = () => {
       return (
         <section className="customer-reviews bg-gray-50 py-12">
           <h2 className="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
-          <div className="reviews-container max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div data-aos="zoom-in" className="reviews-container max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {reviews.map(review => (
               <div key={review.id} className="review-card bg-white shadow-md rounded-lg p-6">
                 <div className="flex items-center space-x-4">

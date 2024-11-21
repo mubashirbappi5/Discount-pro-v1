@@ -3,6 +3,7 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import toast from "react-hot-toast";
 import { FaCopy } from "react-icons/fa";
 import { ImBarcode } from "react-icons/im";
+import { MdUpdate } from "react-icons/md";
 
 
 const CouponCard = ({ coupon, shop_link }) => {
@@ -11,7 +12,7 @@ const CouponCard = ({ coupon, shop_link }) => {
     const [copid,setcopid] = useState(false)
   return (
     <div>
-      <div className="border p-5 w-72  rounded-xl bg-orange-400 space-y-5">
+      <div className="border p-5 w-72  rounded-xl bg-green-300 space-y-5">
         <h1 className="text-3xl w-10/12 mx-auto font-bold text-center">
           {description}
         </h1>
@@ -23,7 +24,7 @@ const CouponCard = ({ coupon, shop_link }) => {
         <div className="border-b-8 border-dotted "></div>
         <div className="flex justify-between items-end mt-10">
           <div>
-            <p>{expiry_date}</p>
+            <p className="flex items-center gap-1 text-sm font-bold"><MdUpdate />{expiry_date}</p>
             <ImBarcode className="text-3xl ml-6" />
             <div className="flex">
            

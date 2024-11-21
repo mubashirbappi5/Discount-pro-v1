@@ -56,12 +56,12 @@ const Navber = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost lg:text-xl text-sm ">Discount PRO </a>
+          <a className="btn btn-ghost lg:text-xl text-sm "> <img className="w-10 hidden md:flex" src="https://i.ibb.co.com/8KpnHQt/icons8-voucher-64.png" alt="" />Discount PRO </a>
         </div>
         <div className="navbar-center hidden lg:flex gap-20">
           <div>
            {
-            user? <h1 className="animate__animated animate__fadeInDown animate__delay-2s">welcome  {displayName}! </h1>:''
+            user? <h1 className="font-bold  animate__animated animate__fadeInDown animate__delay-2s"><span className="text-blue-400">Welcome</span>  {displayName}! </h1>:''
            }
           </div>
           <ul className="menu menu-horizontal px-1">{links}</ul>
@@ -69,7 +69,11 @@ const Navber = () => {
         <div className="navbar-end  gap-4">
           {user ? (
            <div className="flex gap-2 ">
-             <img className=" w-10 h-10 md:w-20 md:h-20 rounded-full" src={photoURL} alt="ss" />
+             {
+              user.photoURL?<img className=" w-10 h-10 md:w-20 md:h-20 rounded-full" src={photoURL} alt="photo" />:<div className="w-10 h-10 rounded-full">
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+             }
             <div className="flex flex-col gap-2">
             <h5 className="font-bold text-xs">{email}</h5>
             <div>
@@ -80,11 +84,11 @@ const Navber = () => {
              
            </div>
           ) : (
-            <div>
-              <NavLink to={"/login"} className="btn btn-outline">
+            <div className=" flex gap-4">
+              <NavLink to={"/login"} className="btn btn-outline ">
                 Login
               </NavLink>
-              <NavLink to={"register"} className="btn btn-outline">
+              <NavLink to={"register"} className="btn btn-outline bg-green-400 border-green-400">
                 Register
               </NavLink>
             </div>

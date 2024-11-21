@@ -32,7 +32,7 @@ const Couponpage = () => {
 
 
            </section>
-           <section className='grid grid-cols-1 md:grid-cols-2 w-10/12 mx-auto '>
+           <section className='grid grid-cols-1 md:grid-cols-2 w-10/12 mx-auto gap-4 '>
             {
                 coupons.map((coupon,idx) => <CouponCard key={idx} coupon={coupon} shop_link={shop_link}/>)
             }

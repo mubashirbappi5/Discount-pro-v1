@@ -4,11 +4,12 @@ import SocialBtn from "../Components/SocialBtn";
 import { AuthnContext } from "../Provider/AuthContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { auth } from "../Firebase/Firebace.init";
 
 const Register = () => {
-  const {registerUser,updateuser,messageErorr,setmessageErorr,showpass,setshowpass}=useContext(AuthnContext)
+  const {registerUser,updateuser,messageErorr,setmessageErorr,showpass,setshowpass, setuser,setloading}=useContext(AuthnContext)
    const navigate = useNavigate()
-    const HandleRegister = (e)=>{
+    const HandleRegister = async (e)=>{
         e.preventDefault()
         const form = e.target
         const name = form.name.value
@@ -23,29 +24,34 @@ const Register = () => {
             setmessageErorr("Invalid password! must be 6 character & Atleast one lowercase and uppercase")
             return
           }
+          try {
+            const res = await registerUser(email,password)
         
-        registerUser(email,password)
-        .then((res)=>{
           console.log(res.user)
           const profile ={
             displayName:name,
             photoURL:url
           }
-          updateuser(profile)
-          .then(()=>{
-            console.log('profile update')
-
-          })
-          .catch((error)=>{
-           toast.error(error.message)
-          })
-          toast.success('Successfully register!')
-          navigate('/')
-        })
-        .catch((error)=>{
-          toast.error(error.message)
-        })
-
+         
+            await updateuser(profile);
+            toast.success("Profile updated!");
+      
+            await auth.currentUser.reload();
+           
+      
+            const updatedUser = auth.currentUser;
+      
+            setuser({
+              ...updatedUser,
+            });
+      
+            navigate("/");
+            setloading(false)
+           
+          } catch (error) {
+            toast.error(error.message);
+          }
+        
     }
   return (
     <div>

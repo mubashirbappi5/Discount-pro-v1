@@ -5,7 +5,7 @@ import { auth } from "../Firebase/Firebace.init";
 import toast from "react-hot-toast";
 
 const UpdateProfile = () => {
-  const { updateuser, setuser, user, setloading } = useContext(AuthnContext);
+  const { updateuser, setuser,  setloading } = useContext(AuthnContext);
   const navigate = useNavigate();
 
   const handleupdateinfo = async (e) => {
@@ -67,7 +67,7 @@ const UpdateProfile = () => {
                 name="url"
                 placeholder=" photo-URL  "
                 className="input input-bordered"
-                required
+               
               />
             </div>
             <div className="form-control mt-6">

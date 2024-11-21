@@ -20,12 +20,12 @@ const MainRoutes = createBrowserRouter([{
     children:[{
         path:'/',
         element:<Home/>,
-        loader:()=>fetch('/public/Data.json')
+        loader:()=>fetch('/Data.json')
     },
     {
         path:"/brands",
         element:<Brands/>,
-        loader:()=>fetch('/public/Data.json')
+        loader:()=>fetch('/Data.json')
     },
     {
         path:"/about",
@@ -45,7 +45,7 @@ const MainRoutes = createBrowserRouter([{
     },
     {
         path:'/brands/:id',
-        loader:()=> fetch('/public/Data.json'),
+        loader:()=> fetch('/Data.json'),
         element:<PrivateRoute><Couponpage/></PrivateRoute>
     },
     {
