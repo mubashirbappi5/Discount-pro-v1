@@ -58,6 +58,7 @@ const AuthContext = ({children}) => {
         setmessageErorr,
         signinUser,
         user,
+        setuser,
         signoutUser,
         googlesigninUser,
         loading,
