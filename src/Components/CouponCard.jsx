@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import toast from "react-hot-toast";
 import { FaCopy } from "react-icons/fa";
 import { ImBarcode } from "react-icons/im";
-import { RiVerifiedBadgeLine } from "react-icons/ri";
 
 
 const CouponCard = ({ coupon, shop_link }) => {
@@ -26,14 +26,14 @@ const CouponCard = ({ coupon, shop_link }) => {
             <p>{expiry_date}</p>
             <ImBarcode className="text-3xl ml-6" />
             <div className="flex">
-            <button className="btn btn-sm">{coupon_code}  </button>
+           
             <CopyToClipboard text={coupon_code}
             onCopy={()=>{
-                alert('copy done')
+               toast.success("coupon code copied!")
                 setcopid(true)
             }}>
               {
-                copid ? <button className="btn btn-sm"><RiVerifiedBadgeLine /> </button>: <button className="btn btn-sm"><FaCopy /></button>
+                copid ? <button className="btn btn-sm">Code Copied! </button>  : <button className="btn btn-sm"> <FaCopy/>Copy Code </button>
               }
             </CopyToClipboard>
             </div>

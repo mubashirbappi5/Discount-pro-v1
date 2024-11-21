@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthnContext } from '../Provider/AuthContext';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const SocialBtn = () => {
     const {googlesigninUser} = useContext(AuthnContext)
@@ -11,6 +12,7 @@ const SocialBtn = () => {
         googlesigninUser()
         .then((res)=>{
             console.log(res)
+            toast.success('Successfully login!')
             navigate(location?.state?location.state:'/')
 
         })

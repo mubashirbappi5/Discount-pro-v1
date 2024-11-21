@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SocialBtn from "../Components/SocialBtn";
 import { AuthnContext } from "../Provider/AuthContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const {registerUser,updateuser,messageErorr,setmessageErorr,showpass,setshowpass}=useContext(AuthnContext)
@@ -19,7 +20,7 @@ const Register = () => {
         const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
           if(!passwordRegex.test(password)) {
            
-            setmessageErorr("invalid password")
+            setmessageErorr("Invalid password! must be 6 character & Atleast one lowercase and uppercase")
             return
           }
         
@@ -36,12 +37,13 @@ const Register = () => {
 
           })
           .catch((error)=>{
-            console.log(error.message)
+           toast.error(error.message)
           })
+          toast.success('Successfully register!')
           navigate('/')
         })
         .catch((error)=>{
-          alert(error.message)
+          toast.error(error.message)
         })
 
     }
@@ -99,9 +101,9 @@ const Register = () => {
                 className="input input-bordered"
                 required
               />
-              <button onClick={()=>setshowpass(!showpass)} className=" absolute right-12 top-[359px]  ">{showpass?<FaEyeSlash />:<FaEye />}</button>
+              <button onClick={(e)=>{ e.preventDefault(),setshowpass(!showpass)}} className=" absolute right-12 top-[359px]  ">{showpass?<FaEyeSlash />:<FaEye />}</button>
               {
-                messageErorr && <p>{messageErorr}</p>
+                messageErorr && <p className="text-red-600 text-sm ml-1">{messageErorr}</p>
               }
             </div>
             <div className="form-control mt-6">

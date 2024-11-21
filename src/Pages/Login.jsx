@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import SocialBtn from '../Components/SocialBtn';
 import { AuthnContext } from '../Provider/AuthContext';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const {signinUser} = useContext(AuthnContext)
@@ -19,10 +20,11 @@ const Login = () => {
         signinUser(email,password)
         .then((res)=>{
           console.log(res.user)
+          toast.success('Successfully login!')
           navigate(location?.state?location.state:'/')
 
         })
-        .catch(error=>alert(error.message))
+        .catch(error=>toast.error(error.message))
 
     }
     return (

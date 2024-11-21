@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState,  } from 'react';
 import { auth } from '../Firebase/Firebace.init';
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import toast from 'react-hot-toast';
 
 export const AuthnContext = createContext()
 const AuthContext = ({children}) => {
@@ -45,7 +46,7 @@ const AuthContext = ({children}) => {
         setloading(true)
         signOut(auth)
         .then(()=>{
-            console.log("log out done")
+            toast.success(' LogOut Successful!')   
         })
         .catch(error=> console.log(error))
     }
@@ -64,7 +65,8 @@ const AuthContext = ({children}) => {
         loading,
         setloading,
         showpass,
-        setshowpass
+        setshowpass,
+        setloading,
 
     }
    
