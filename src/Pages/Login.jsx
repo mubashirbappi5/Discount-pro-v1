@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import SocialBtn from '../Components/SocialBtn';
 import { AuthnContext } from '../Provider/AuthContext';
@@ -6,12 +6,14 @@ import toast from 'react-hot-toast';
 
 const Login = () => {
   const {signinUser} = useContext(AuthnContext)
+  const[email,setemail] = useState('')
   const location = useLocation()
   const navigate = useNavigate()
     const LoginHandle = (e)=>{
         e.preventDefault()
         const form = e.target
-        const email = form.email.value
+        
+        
         const password = form.password.value
         console.log(email,password)
 
@@ -36,7 +38,7 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+          <input type="email" name='email' placeholder="email" value={email} className="input input-bordered"onChange={(e) => setemail(e.target.value)} required />
         </div>
         <div className="form-control">
           <label className="label">
@@ -44,7 +46,7 @@ const Login = () => {
           </label>
           <input type="password" name='password' placeholder="password" className="input input-bordered" required />
           <label className="label">
-            <Link to={'/forget-pass'} className="label-text-alt link link-hover">Forgot password?</Link>
+            <Link to={'/forget-pass'} state={email} className="label-text-alt link link-hover">Forgot password?</Link>
           </label>
         </div>
         <div className="form-control mt-6">

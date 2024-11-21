@@ -1,17 +1,24 @@
 import { sendPasswordResetEmail } from 'firebase/auth';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { auth } from '../Firebase/Firebace.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 const ForgotPassword = () => {
     const  [email,setemail] = useState('')
     const navigate = useNavigate()
+    const location = useLocation()
+    console.log(location.state)
+    useEffect(() => {
+      if (location.state) {
+        setemail(location.state);
+        console.log(location.state)
+      }
+    }, [location.state]);
 
    const handlereset = (e)=>{
     e.preventDefault()
-    const form = e.target
-    const email = form.name.value
+    
     console.log(email)
     sendPasswordResetEmail(auth, email)
     .then(() => {
@@ -53,7 +60,7 @@ const ForgotPassword = () => {
           <label className="label">
             <span className="label-text">Enter your email</span>
           </label>
-          <input type="email" name='name' placeholder=" Name  " className="input input-bordered" required />
+          <input type="email" name='email' value={email} onChange={(e) => setemail(e.target.value)} placeholder=" your eamil  "  className="input input-bordered" required />
         </div>
        
         <div className="form-control mt-6">
