@@ -16,7 +16,7 @@ const SocialBtn = () => {
             navigate(location?.state?location.state:'/')
 
         })
-        .then((error)=>console.log(error))
+        .then((error)=>toast.error(error))
 
     }
     return (

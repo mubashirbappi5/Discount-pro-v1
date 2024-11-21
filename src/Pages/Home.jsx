@@ -13,7 +13,7 @@ AOS.init();
 
 const Home = () => {
     const data = useLoaderData()
-    console.log(data)
+    
     
     return (
         <div >
@@ -26,7 +26,7 @@ const Home = () => {
            <Marquee pauseOnHover={true}>
        
            {Array.isArray(data) &&
-            data.filter(  data => data.rating >4.6).map(data=>  <TopBrands key={data.id} data={data}/>)
+            data.filter(  data => data.rating >4.6).map(data=>  <TopBrands key={data._id} data={data}/>)
            }
         
         
@@ -37,7 +37,7 @@ const Home = () => {
 
              <div className='grid  grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-4 my-10 '>
              {Array.isArray(data) &&
-                 data.filter(data=>data.isSaleOn===true).map(data=><BrandsonSale key={data.id} data={data}/>)  
+                 data.filter(data=>data.isSaleOn===true).map(data=><BrandsonSale key={data._id} data={data}/>)  
               }
              </div>
            </section>

@@ -23,7 +23,7 @@ const BrandCards = ({data}) => {
   <div className="col-span-2 p-6 space-y-5">
   <div className='flex justify-between'>
    
-   <p className='flex items-center gap-2'> 
+   <div className='flex items-center gap-2'> 
    <div className="rating">
  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
  <input
@@ -36,7 +36,7 @@ const BrandCards = ({data}) => {
  
 </div>
    <span className='text-lg font-bold'>{rating}</span>
-     </p>
+     </div>
    {
        isSaleOn && <h1 className='flex items-center gap-2 animate__animated animate__bounce animate__infinite animate__slow'><img src="https://img.icons8.com/?size=100&id=97WBBzi56mor&format=png&color=000000" alt="" className='w-10' /> <span className='text-lg font-semibold text-pink-600'>sale is on</span></h1>
    }

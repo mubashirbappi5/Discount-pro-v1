@@ -15,7 +15,7 @@
           "coupon_type": "Free Shipping"
         }
       ],
-      "shop_link": "https://www.bata.com.bd",
+      "shop_link": "https://www.batabd.com/",
       "category": "Footwear",
       "isSaleOn": true
     },
@@ -41,7 +41,7 @@
           "coupon_type": "Free Shipping"
         }
       ],
-      "shop_link": "https://www.arong.com",
+      "shop_link": "https://www.aarong.com/",
       "category": " Lifestyle",
       "isSaleOn": true
     },
@@ -67,7 +67,7 @@
           "coupon_type": "Free Shipping"
         }
       ],
-      "shop_link": "https://www.adidas.com",
+      "shop_link": "https://www.adidas.com/us",
       "category": "Sportswear",
       "isSaleOn": true
     },
@@ -93,7 +93,7 @@
           "coupon_type": "Discount"
         }
       ],
-      "shop_link": "https://www.puma.com",
+      "shop_link": "https://us.puma.com/us/en",
       "category": "Sportswear",
       "isSaleOn": true
     },
@@ -119,7 +119,7 @@
           "coupon_type": "Free Shipping"
         }
       ],
-      "shop_link": "https://www.hugoboss.com",
+      "shop_link": "https://www.hugoboss.com/selectcountry",
       "category": "Luxury Fashion",
       "isSaleOn": false
     },
@@ -145,7 +145,7 @@
           "coupon_type": "Free Shipping"
         }
       ],
-      "shop_link": "https://www.nike.com",
+      "shop_link": "https://www.nike.com/ie/",
       "category": "Sportswear",
       "isSaleOn": true
     },
@@ -171,7 +171,7 @@
           "coupon_type": "Free Shipping"
         }
       ],
-      "shop_link": "https://www.apex4u.com",
+      "shop_link": "https://www.apexfootwearltd.com/",
       "category": "Footwear",
       "isSaleOn": true
     },
@@ -190,7 +190,7 @@
             "coupon_type": "Discount"
           }
         ],
-        "shop_link": "https://www.rokomari.com",
+        "shop_link": "https://www.rokomari.com/book",
         "category": "Books",
         "isSaleOn": false
       },
@@ -216,7 +216,7 @@
             "coupon_type": "Discount"
           }
         ],
-        "shop_link": "https://www.foodpanda.com.bd",
+        "shop_link": "https://www.foodpanda.com.bd/",
         "category": "Food Delivery",
         "isSaleOn": true
       },
@@ -235,7 +235,7 @@
             "coupon_type": "Discount"
           }
         ],
-        "shop_link": "https://www.pickaboo.com",
+        "shop_link": "https://www.pickaboo.com/",
         "category": "Electronics",
         "isSaleOn": true
       }
