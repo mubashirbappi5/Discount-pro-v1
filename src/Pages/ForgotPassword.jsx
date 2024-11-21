@@ -9,14 +9,17 @@ const ForgotPassword = () => {
     const navigate = useNavigate()
 
    const handlereset = (e)=>{
+    e.preventDefault()
     const form = e.target
     const email = form.name.value
     console.log(email)
     sendPasswordResetEmail(auth, email)
     .then(() => {
-      console.log(hi)
+    
         toast.success('Password reset email sent!')
-       
+        setTimeout(() => {
+          window.location.href = "https://mail.google.com";
+      }, 2000);
          
         })
          .catch((error) => {
