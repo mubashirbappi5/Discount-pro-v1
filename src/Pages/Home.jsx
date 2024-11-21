@@ -7,6 +7,8 @@ import BrandsonSale from '../Components/BrandsonSale';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Reviewsection from '../Components/Reviewsection';
+import FeedBack from '../Components/FeedBack';
 AOS.init();
 
 const Home = () => {
@@ -38,6 +40,13 @@ const Home = () => {
                  data.filter(data=>data.isSaleOn===true).map(data=><BrandsonSale key={data.id} data={data}/>)  
               }
              </div>
+           </section>
+           <section className='my-10 w-10/12 mx-auto'>
+            <Reviewsection/>
+
+           </section>
+           <section className='my-10'>
+            <FeedBack/>
            </section>
             
         </div>
