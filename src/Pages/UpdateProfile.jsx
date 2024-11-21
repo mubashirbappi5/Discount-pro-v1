@@ -17,20 +17,30 @@ const UpdateProfile = () => {
             photoURL:url
           }
         updateuser(profile)
-        .then((res)=>{
-            console.log("update done")
-            const currentUser = auth.currentUser;
-            currentUser.reload()
-            .then(()=>{
-                setTimeout(() => navigate("/my-profile"), 1000);
+        .then(() => {
+            console.log("Profile updated!");
 
-            })
             
-            
+            auth.currentUser.reload()
+                .then(() => {
+                   
+                    const updatedUser = auth.currentUser;
+
+                    
+                    setuser({
+                        ...updatedUser,  
+                    });
+
+                   
+                    setTimeout(() => navigate("/my-profile"), 1000);
+                })
+                .catch((error) => {
+                    console.log("Error reloading user data:", error);
+                });
         })
-        .catch(error=> console.log(error))
+        .catch((error) => console.log(error));
+};
 
-    }
     return (
         <div className='space-y-6'>
             <div className='flex justify-center '>

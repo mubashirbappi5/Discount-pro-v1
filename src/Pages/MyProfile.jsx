@@ -17,7 +17,7 @@ const MyProfile = () => {
            </div>
           <div className='flex flex-col items-center justify-center '>
             <img className='rounded-full border-2 border-green-500 w-32 h-32 absolute top-72 ' src={photoURL} alt="" />
-           <div className=' my-8 h-40 border-2 shadow-xl p-10 rounded-lg flex flex-col items-center justify-center '>
+           <div className=' my-20 h-40 border-2 shadow-xl p-10 rounded-lg flex flex-col items-center justify-center '>
             <h1 className='text-center font-bold text-3xl mt-7'>{displayName}</h1>
             <h2 className='text-center font-semibold mt-2'>{email}</h2>
             <button onClick={handleupdate} className="btn bg-green-600 text-white font-bold mt-4">update </button>

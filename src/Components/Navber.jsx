@@ -69,7 +69,7 @@ const Navber = () => {
         <div className="navbar-end  gap-4">
           {user ? (
            <div className="flex gap-2 ">
-             <img className=" w-10 md:w-20 rounded-full" src={photoURL} alt="ss" />
+             <img className=" w-10 h-10 md:w-20 md:h-20 rounded-full" src={photoURL} alt="ss" />
             <div className="flex flex-col gap-2">
             <h5 className="font-bold text-xs">{email}</h5>
             <div>

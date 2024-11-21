@@ -10,6 +10,7 @@ import Couponpage from "../Pages/Couponpage";
 import PrivateRoute from "./PrivateRoute";
 import MyProfile from "../Pages/MyProfile";
 import UpdateProfile from "../Pages/UpdateProfile";
+import ForgotPassword from "../Pages/ForgotPassword";
 
 
 const MainRoutes = createBrowserRouter([{
@@ -33,6 +34,10 @@ const MainRoutes = createBrowserRouter([{
     {
         path:"/login",
         element:<Login/>
+    },
+    {
+        path:'/forget-pass',
+        element:<ForgotPassword/>
     },
     {
         path:"/register",
