@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SocialBtn from "../Components/SocialBtn";
 import { AuthnContext } from "../Provider/AuthContext";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const {registerUser,updateuser,messageErorr,setmessageErorr}=useContext(AuthnContext)
+  const {registerUser,updateuser,messageErorr,setmessageErorr,showpass,setshowpass}=useContext(AuthnContext)
    const navigate = useNavigate()
     const HandleRegister = (e)=>{
         e.preventDefault()
@@ -89,14 +90,16 @@ const Register = () => {
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Password</span>
+                
               </label>
               <input
-                type="password"
+                type={showpass?'text':"password"}
                 name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
+              <button onClick={()=>setshowpass(!showpass)} className=" absolute right-12 top-[359px]  ">{showpass?<FaEyeSlash />:<FaEye />}</button>
               {
                 messageErorr && <p>{messageErorr}</p>
               }

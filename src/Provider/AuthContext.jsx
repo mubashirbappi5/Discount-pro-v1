@@ -7,6 +7,7 @@ const AuthContext = ({children}) => {
     const [messageErorr,setmessageErorr] = useState('')
     const [user , setuser] = useState(null)
     const [loading,setloading] = useState(true)
+    const [showpass,setshowpass]=useState(false)
     const provider = new GoogleAuthProvider()
      
      const registerUser = (email,password)=>{
@@ -61,6 +62,8 @@ const AuthContext = ({children}) => {
         googlesigninUser,
         loading,
         setloading,
+        showpass,
+        setshowpass
 
     }
    

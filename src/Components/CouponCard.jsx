@@ -41,7 +41,7 @@ const CouponCard = ({ coupon, shop_link }) => {
           </div>
           <button className="btn btn-sm mt-6">
             
-            <a href={shop_link}>Shop Now</a>
+            <a href={shop_link}>Use Now</a>
           </button>
         </div>
       </div>
