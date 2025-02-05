@@ -30,7 +30,7 @@ Animations
 
 
 
-***NPM Packages Used**
+***Technologies  Used**
 
 1.React: For building the front-end application.
 
